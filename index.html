@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora Médica</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🩺 Calculadora Médica Online</h1>
+
+    <!-- IMC -->
+    <section>
+      <h2>IMC (Índice de Masa Corporal)</h2>
+      <input type="number" id="peso" placeholder="Peso en kg">
+      <input type="number" id="altura" placeholder="Altura en metros">
+      <button onclick="calcularIMC()">Calcular IMC</button>
+      <p id="resultadoIMC"></p>
+      <canvas id="graficoIMC" width="300" height="200"></canvas>
+    </section>
+
+    <!-- Frecuencia Cardíaca -->
+    <section>
+      <h2>Frecuencia Cardíaca Objetivo</h2>
+      <input type="number" id="edad" placeholder="Edad">
+      <button onclick="calcularFrecCardiaca()">Calcular</button>
+      <p id="resultadoFrec"></p>
+    </section>
+
+    <!-- Dosis de Medicamento -->
+    <section>
+      <h2>Dosis de Medicamento</h2>
+      <input type="number" id="pesoPaciente" placeholder="Peso en kg">
+      <input type="number" id="dosisMgKg" placeholder="Dosis (mg/kg)">
+      <button onclick="calcularDosis()">Calcular</button>
+      <p id="resultadoDosis"></p>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
